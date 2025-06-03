@@ -1,7 +1,7 @@
 <?php
 
 class Stock {
-    private array $products;
+    private array $products = [];
     public function __construct() {
         
     }
@@ -28,8 +28,6 @@ class Stock {
 
     public function getByName(string $name)
     {
-        echo  $name . "aquiiiii";
-        var_dump($this->products);
         foreach ($this->products as $product) {
             if($product["name"] == $name) return $product;
         }
